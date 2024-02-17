@@ -1,0 +1,23 @@
+{
+  "name": "incubyte-assesment",
+  "version": "1.0.0",
+  "description": "TDD string calculator",
+  "main": "string_calculator.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harshharsola/incubyte-assesment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harshharsola/incubyte-assesment/issues"
+  },
+  "homepage": "https://github.com/Harshharsola/incubyte-assesment#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
