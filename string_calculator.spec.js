@@ -12,4 +12,12 @@ describe("test suite for string calculator", () => {
   test("sum of 5,6,7,8,9", () => {
     expect(string_calculator("5,6,7,8,9")).toBe(35);
   });
+
+  test("sum of 5\n6,7,8,9", () => {
+    expect(string_calculator("5\n6,7,8,9")).toBe(35);
+  });
+
+  test("sum of //;\n1;2", () => {
+    expect(string_calculator("//;\n1;2")).toBe(3);
+  });
 });
