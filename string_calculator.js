@@ -2,6 +2,9 @@ function string_calculator(inputString) {
   if (inputString.trim().length === 0) {
     return 0;
   }
+  if (!!(inputString.search(",\n") >= 0 || inputString.search("\n,") >= 0)) {
+    throw new Error("invalid input");
+  }
   let delimiter = ",";
   let isDellimitterDefined = false;
   if (inputString.slice(0, 2) === "//" && inputString[3] === "\n") {

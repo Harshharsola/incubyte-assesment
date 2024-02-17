@@ -40,4 +40,20 @@ describe("test suite for string calculator", () => {
       expect(e.message).toBe("negative numbers not allowed -9,-2,");
     }
   });
+
+  test("invalid input 1,\n", () => {
+    try {
+      string_calculator("1,\n");
+    } catch (e) {
+      expect(e.message).toBe("invalid input");
+    }
+  });
+
+  test("invalid input 2,3,4,1,\n,5,6,7", () => {
+    try {
+      string_calculator("2,3,4,1,\n,5,6,7");
+    } catch (e) {
+      expect(e.message).toBe("invalid input");
+    }
+  });
 });
