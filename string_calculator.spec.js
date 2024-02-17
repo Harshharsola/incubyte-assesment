@@ -20,4 +20,16 @@ describe("test suite for string calculator", () => {
   test("sum of //;\n1;2", () => {
     expect(string_calculator("//;\n1;2")).toBe(3);
   });
+
+  test("define delimiter //;\n1;2", () => {
+    expect(string_calculator("//;\n1;2")).toBe(3);
+  });
+
+  test("negative number", () => {
+    try {
+      string_calculator("-3,2");
+    } catch (e) {
+      expect(e.message).toBe("negative numbers not allowed -3");
+    }
+  });
 });
