@@ -56,4 +56,12 @@ describe("test suite for string calculator", () => {
       expect(e.message).toBe("invalid input");
     }
   });
+
+  test("invalid input //;\n1;2\n:", () => {
+    try {
+      string_calculator("//;\n1;2\n:");
+    } catch (e) {
+      expect(e.message).toBe("invalid input");
+    }
+  });
 });
