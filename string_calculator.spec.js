@@ -29,7 +29,15 @@ describe("test suite for string calculator", () => {
     try {
       string_calculator("-3,2");
     } catch (e) {
-      expect(e.message).toBe("negative numbers not allowed -3");
+      expect(e.message).toBe("negative numbers not allowed -3,");
+    }
+  });
+
+  test("multiple negative number -9,-2,3", () => {
+    try {
+      string_calculator("-9,-2,3");
+    } catch (e) {
+      expect(e.message).toBe("negative numbers not allowed -9,-2,");
     }
   });
 });

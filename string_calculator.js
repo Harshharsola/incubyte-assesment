@@ -16,14 +16,21 @@ function string_calculator(inputString) {
   }
 
   let sum = 0;
+  let negativeNumberString = "";
+  let negativeNumbersExist = false;
   numberArray.forEach((number) => {
     if (+number) {
       if (+number < 0) {
-        throw new Error(`negative numbers not allowed ${+number}`);
+        negativeNumbersExist = true;
+        negativeNumberString += number + ",";
       }
       sum += +number;
     }
   });
+  if (negativeNumbersExist) {
+    throw new Error("negative numbers not allowed " + negativeNumberString);
+  }
+
   return sum;
 }
 module.exports = string_calculator;
